@@ -14,7 +14,7 @@ Decision trees work for **categorical and numerical variables**. The process inv
 ### 2. Entropy
 Entropy measures **disorder** in the data.  
 Formula:  
-\[ \text{Entropy} = \sum_{i=1}^C -p_i \log p_i \]  
+Entropy = Σ (-p_i * log₂(p_i)) for i = 1 to C
 - Higher entropy = more uncertainty (max entropy for balanced classes).  
 - Lower entropy = more homogeneity (e.g., one dominant class).  
 
@@ -28,12 +28,13 @@ Metric to select the **best feature** for splitting.
 - Measures **reduction in entropy** after a split.  
 - Higher gain = better split.  
 Formula:  
-\[ \text{Info Gain} = \text{Entropy(Parent)} - \text{Weighted Avg } \text{Entropy(Children)} \]  
+Info Gain = Entropy(parent) - Σ (weight_child * Entropy(child))
+
 
 ### 4. Gini Impurity
 Alternative to entropy for evaluating splits.  
 Formula:  
-\[ \text{Gini} = 1 - \sum_{i=1}^C p_i^2 \]  
+Gini = 1 - Σ (p_i²) for i = 1 to C
 - Lower Gini = better split (0 for pure nodes).  
 
 ---
