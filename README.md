@@ -1,7 +1,7 @@
 # Decision Trees: Concepts and Implementation
 
 This repository explains Decision Trees based on the provided PDF, covering key concepts like entropy, information gain, and Gini impurity for building decision trees in classification tasks.
-
+# In Decision Tree always prefer to give max_depth otherwise it would overfit in most of cases.
 ## Key Concepts from the PDF
 
 ### 1. Basics of Decision Trees
